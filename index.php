@@ -27,51 +27,11 @@
 
   <body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="img-fluid" style="width: 15%;height: 15%;" src="adelphi.png">Incident Tracker</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <div class="dropdown">
-  <button class="btn btn-danger nav-link js-scroll-trigger dropdown-toggle" style=" border: 0px; " id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Incident Tracker
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Report an Incident</a>
-    <a class="dropdown-item" href="#">Not Registered? Sign up now</a>
-    <a class="dropdown-item" href="#"></a>
-  </div>
-</div>
-            </li>
-           
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">
-              	
+   <?php 
 
-<!-- Button to Open the Modal -->
-<div  data-toggle="modal" data-target="#myModal">
-  Contact Us
-</div>
+    include('navbar.php');
+    ?>
 
-
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
     <!-- Header -->
     <header class="masthead">
@@ -80,7 +40,7 @@
           <div class="intro-lead-in">Welcome to <span style="color: orange;">Incident Reporting System</span> For more options click the incident tracker button</div>
           <div ><span class="alert-success">Login to our system to start reporting incidents or to view recorded incidents</span></div>
           <br>
-          <a class="btn btn-info btn-xl text-uppercase js-scroll-trigger" href="#services">Sign Up</a>
+          <a class="btn btn-info btn-xl text-uppercase js-scroll-trigger" href="signup.php">Sign Up</a>
         </div>
       </div>
     </header>
@@ -241,116 +201,13 @@
 
 
 
+<?php 
+  include('contact_us.php');
+  include('footer.php');
+  
+ ?>
 
 
-<!-- The Modal -->
-<div class="modal" id="myModal" >
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content" >
-
-      <!-- Modal Header <-->
-      	<hr>
-      </-->
-      <div class="text-center">
-        <h4 class="modal-title ">Contact Us Form</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-       
-
-        <form id="contact-form" method="post" action="contact.php" role="form">
-
-    <div class="messages"></div>
-
-    <div class="controls">
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_name">Firstname *</label>
-                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_lastname">Lastname *</label>
-                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_need">Please specify your need *</label>
-                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
-                        <option value=""></option>
-                        <option value="Request quotation">Request quotation</option>
-                        <option value="Request incident">Request incident</option>
-                       
-                        <option value="Other">Other</option>
-                    </select>
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="form_message">Message *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <input type="submit" class="btn btn-block btn-success btn-send" value="Send message">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="text-muted">
-                    <strong>*</strong> These fields are required.</p>
-            </div>
-        </div>
-    </div>
-
-</form>
-    
-
-
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-    <!-- Footer -->
-    <footer style="background: grey;">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12" >
-            <span class="copyright">Copyright &copy; Incident Tracker</span>
-          </div>
-        
-        
-      </div>
-    </footer>
 
 
     <!-- Bootstrap core JavaScript -->
